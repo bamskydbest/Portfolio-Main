@@ -12,7 +12,7 @@ export default function App() {
   const { toggleTheme, isDark } = useTheme();
 
   return (
-    <div className="bg-[#0f0f1b] text-white font-sans">
+    <div className="font-sans transition-colors duration-300">
       <button
         onClick={toggleTheme}
         className="absolute top-5 right-5 p-2 bg-yellow-400 text-black rounded-full z-50"

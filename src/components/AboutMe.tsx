@@ -10,6 +10,7 @@ export default function AboutMe() {
         <img
           src="/profile.jpeg"
           alt="Portrait of Mahmoud Abdulmajeed Taiye"
+          loading="lazy"
           className="w-72 rounded-lg"
         />
         <div>
