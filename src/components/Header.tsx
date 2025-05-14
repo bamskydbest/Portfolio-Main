@@ -24,7 +24,7 @@ export default function Header() {
         perfect design. I also make websites more & more interactive with web
         animations.
       </p>
-      <div className="flex justify-center gap-4 mt-4 text-white">
+      <div className="flex justify-center gap-4 mt-4 text-white ">
         <a
           href="https://x.com/Aladagbangba/"
           target="_blank"

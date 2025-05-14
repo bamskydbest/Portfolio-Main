@@ -1,4 +1,5 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { useTheme } from "../context/ThemeContext";
 
 const projects = [
   {
@@ -32,8 +33,14 @@ const projects = [
 ];
 
 export default function Projects() {
+  const { isDark } = useTheme();
+
   return (
-    <section className="py-16 px-6 md:px-20 bg-[#1a1a2e]">
+    <section
+      className={`py-16 px-6 md:px-20 transition-colors duration-300 ${
+        isDark ? "bg-[#1a1a2e]" : "bg-gray-100"
+      }`}
+    >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-yellow-400 text-2xl font-semibold mb-12 text-center">
           PROJECTS
@@ -42,7 +49,9 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-[#0f0f1b] rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300"
+              className={`rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300 ${
+                isDark ? "bg-[#0f0f1b] text-white" : "bg-white text-black"
+              }`}
             >
               <img
                 src={project.image}
@@ -54,7 +63,13 @@ export default function Projects() {
                 <h3 className="text-xl text-yellow-400 font-semibold mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+                <p
+                  className={`mb-4 ${
+                    isDark ? "text-gray-400" : "text-gray-700"
+                  }`}
+                >
+                  {project.description}
+                </p>
                 <a
                   href={project.link}
                   target="_blank"

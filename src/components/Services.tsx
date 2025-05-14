@@ -1,3 +1,5 @@
+import { useTheme } from "../context/ThemeContext";
+
 const services = [
   {
     title: "Custom Website Development",
@@ -32,8 +34,14 @@ const services = [
 ];
 
 export default function Services() {
+  const { isDark } = useTheme();
+
   return (
-    <section className="bg-[#1a1a2e] py-16 px-6 md:px-20">
+    <section
+      className={`py-16 px-6 md:px-20 ${
+        isDark ? "bg-[#1a1a2e]" : "bg-gray-100"
+      }`}
+    >
       <h2 className="text-yellow-400 text-xl font-semibold mb-10 text-center">
         SERVICES
       </h2>
@@ -41,12 +49,14 @@ export default function Services() {
         {services.map((service) => (
           <div
             key={service.title}
-            className="bg-[#0f0f1b] p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300"
+            className={`p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300 ${
+              isDark ? "bg-[#0f0f1b] text-white" : "bg-white text-black"
+            }`}
           >
             <div className="text-yellow-400 font-semibold text-lg mb-2">
               {service.title}
             </div>
-            <p className="text-white text-sm">{service.description}</p>
+            <p className="text-sm">{service.description}</p>
           </div>
         ))}
       </div>

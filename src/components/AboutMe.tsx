@@ -45,7 +45,7 @@ export default function AboutMe() {
             </li>
           </ul>
           <a href={cv} download>
-            <button className="mt-6 bg-yellow-400 text-black px-6 py-2 rounded-md font-semibold">
+            <button className="mt-6 bg-yellow-400 text-black px-6 py-2 rounded-md font-semibold hover:scale-105, transition-all">
               Download CV
             </button>
           </a>

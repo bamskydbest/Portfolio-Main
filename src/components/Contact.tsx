@@ -32,7 +32,7 @@ export default function Contact() {
         ></textarea>
         <button
           type="submit"
-          className="bg-yellow-400 text-black px-6 py-2 rounded-md font-semibold mt-2"
+          className="bg-yellow-400 text-black px-6 py-2 rounded-md font-semibold mt-2 hover:scale-105, transition-all"
         >
           Send Message
         </button>
