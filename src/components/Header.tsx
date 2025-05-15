@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <motion.header
       className="text-center py-20 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/bg.png')" }}
+      style={{ backgroundImage: "url('/bgg.jpg')" }}
       initial="hidden"
       whileInView="visible"
       variants={variants}
@@ -26,7 +26,7 @@ export default function Header() {
       </p>
       <div className="flex justify-center gap-4 mt-4 text-white ">
         <a
-          href="https://x.com/Aladagbangba/"
+          href="https://x.com/MahmoudTaiye/"
           target="_blank"
           rel="noopener noreferrer"
           aria-aria-label
